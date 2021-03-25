@@ -51,6 +51,7 @@ button {
   --border-color: #bdc1fc9f;
   --container   : #fff;
   --text-footer : #e7e7e7;
+  --hover-social: #1a1a1adf;
   --dark-gray   : #636363;
   --light-gray  : #aeaeae;
 }
@@ -104,8 +105,6 @@ header .line {
   align-items: center;
 }
 
-header .column {}
-
 header .column-left {
   flex-basis: 30%;
 }
@@ -114,17 +113,15 @@ header .column-right {
   flex-basis: 70%;
 }
 
-header .column figure {}
-
 header .column img {
   max-width    : 250px;
   border-radius: 100%;
-  filter       : drop-shadow(5px 1px 40px #bdc1fc);
+  filter       : drop-shadow(5px 1px 15px #bdc1fc);
   transition   : 0.5s ease;
 }
 
 header .column img:hover {
-  filter: drop-shadow(5px 1px 15px #bdc1fc);
+  filter: drop-shadow(5px 1px 40px #bdc1fc);
 }
 
 header .column h1 {
@@ -148,20 +145,6 @@ header .column ul li a {
 }
 
 /* INICAL PAGE (MAIN) */
-main {}
-
-main .container {}
-
-main .line {}
-
-main .column {}
-
-main .column-left {}
-
-main .column-right {}
-
-main .column-right section {}
-
 
 main .column section {
   border    : 1px solid var(--border-color);
@@ -183,8 +166,6 @@ main .column section p {
   margin     : 0 0 15px
 }
 
-main .column section ul {}
-
 main .column section ul li {
   line-height: 1.5;
 }
@@ -200,22 +181,11 @@ main .column section ul li strong {
   display    : inline-block;
 }
 
-main .column section ul li p {}
-
-
 /* FOOTER */
 footer {
   background-color: var(--bg);
   min-height      : 20.5vh
 }
-
-footer .container {}
-
-footer nav {}
-
-footer nav ul {}
-
-footer nav ul li {}
 
 footer nav ul li a {
   color: var(--text-footer);
@@ -228,8 +198,6 @@ footer nav .info-contact {
   margin       : 0 0 50px 0;
 
 }
-
-footer nav .info-contact li {}
 
 footer nav .info-contact li a {
   line-height: 1.7;
@@ -244,7 +212,9 @@ footer nav .social-network li {
   margin: 0 15px;
 }
 
-footer nav .social-network li a {}
+footer nav .social-network li a {
+  transition: 0.7s ease;
+}
 
 footer nav .social-network li a i {
   font-size      : 40px;
@@ -253,7 +223,9 @@ footer nav .social-network li a i {
   margin         : 0 0 8px 0;
 }
 
-footer nav .social-network li a img p {}
+footer nav .social-network li a:hover {
+  color: var(--hover-social);
+}
 
 /* EXTRAS */
 
