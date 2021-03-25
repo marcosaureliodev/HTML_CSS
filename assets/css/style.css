@@ -1,0 +1,261 @@
+/* 
+-----------------------------------
+EXTRUCTURE BASE
+-----------------------------------
+ **** DECLARAÇÃO DE VARIÁVEL
+ **** ESTILOS GERAIS
+ **** BODY
+ **** HEADER
+ **** INICAL PAGE (MAIN)
+ **** FOOTER
+ **** EXTRAS
+ **** @MEDIA
+ font-family: 'Open Sans', sans-serif;
+*/
+
+html,
+body,
+figure,
+img,
+div,
+input,
+textarea,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+main {
+  margin         : 0;
+  padding        : 0;
+  outline        : 0;
+  box-sizing     : border-box;
+  list-style     : none;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* COLOR DEFAULT */
+:root {
+  --link-header : #000;
+  --blue        : #0a78fa;
+  --bg          : #999FFF;
+  --border-color: #bdc1fc9f;
+  --container   : #fff;
+  --text-footer : #e7e7e7;
+  --dark-gray   : #636363;
+  --light-gray  : #aeaeae;
+}
+
+/* Para usar essa cores no projeto: 
+  ex: {
+      background: var(--background);
+      color: var(--text);
+  }
+*/
+
+/* BODY */
+.container {
+  width    : 100%;
+  max-width: 1125px;
+  margin   : 0 auto;
+  padding  : 30px;
+}
+
+.line {
+  display        : flex;
+  flex-wrap      : wrap;
+  align-items    : flex-start;
+  justify-content: space-between;
+}
+
+.column {
+  flex-basis: 49%;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* HEADER */
+header {
+  background-color: var(--bg);
+  padding         : 30px 0 0 0;
+}
+
+header .container {
+  background-color: var(--container);
+
+}
+
+header .line {
+  align-items: center;
+}
+
+header .column {}
+
+header .column-left {
+  flex-basis: 30%;
+}
+
+header .column-right {
+  flex-basis: 70%;
+}
+
+header .column figure {}
+
+header .column img {
+  max-width    : 250px;
+  border-radius: 100%;
+  filter       : drop-shadow(5px 1px 40px #bdc1fc);
+  transition   : 0.5s ease;
+}
+
+header .column img:hover {
+  filter: drop-shadow(5px 1px 15px #bdc1fc);
+}
+
+header .column h1 {
+  font-size: 2.5rem;
+}
+
+header .column p {
+  font-size: 1rem;
+  color    : var(--dark-gray);
+}
+
+header .column ul {}
+
+header .column ul li {
+  margin-top: 10px;
+}
+
+header .column ul li a {
+  font-size: 1rem;
+  color    : var(--link-header);
+}
+
+/* INICAL PAGE (MAIN) */
+main {}
+
+main .container {}
+
+main .line {}
+
+main .column {}
+
+main .column-left {}
+
+main .column-right {}
+
+main .column-right section {}
+
+
+main .column section {
+  border    : 1px solid var(--border-color);
+  margin    : 0 0 20px;
+  padding   : 20px;
+  min-height: 288px;
+
+}
+
+main .column section h2 {
+  font-size: 1.3rem;
+  margin   : 0 0 15px;
+}
+
+main .column section p {
+  font-size  : 0.9rem;
+  color      : var(--dark-gray);
+  line-height: 1.5;
+  margin     : 0 0 15px
+}
+
+main .column section ul {}
+
+main .column section ul li {
+  line-height: 1.5;
+}
+
+main .column section ul li h3 {
+  font-size: 1.1rem;
+}
+
+main .column section ul li strong {
+  font-size  : 0.9rem;
+  font-weight: 500;
+  margin     : 5px 0 10px;
+  display    : inline-block;
+}
+
+main .column section ul li p {}
+
+
+/* FOOTER */
+footer {
+  background-color: var(--bg);
+  min-height      : 20.5vh
+}
+
+footer .container {}
+
+footer nav {}
+
+footer nav ul {}
+
+footer nav ul li {}
+
+footer nav ul li a {
+  color: var(--text-footer);
+
+}
+
+footer nav .info-contact {
+  border-bottom: solid 1px var(--border-color);
+  padding      : 0 0 20px 0;
+  margin       : 0 0 50px 0;
+
+}
+
+footer nav .info-contact li {}
+
+footer nav .info-contact li a {
+  line-height: 1.7;
+}
+
+footer nav .social-network {
+  display        : flex;
+  justify-content: center;
+}
+
+footer nav .social-network li {
+  margin: 0 15px;
+}
+
+footer nav .social-network li a {}
+
+footer nav .social-network li a i {
+  font-size      : 40px;
+  display        : flex;
+  justify-content: center;
+  margin         : 0 0 8px 0;
+}
+
+footer nav .social-network li a img p {}
+
+/* EXTRAS */
+
+
+/* @MEDIA */
