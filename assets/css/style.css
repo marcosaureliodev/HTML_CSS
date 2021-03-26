@@ -43,17 +43,19 @@ button {
   cursor: pointer;
 }
 
-/* COLOR DEFAULT */
+/* =========COLOR DEFAULT========= */
 :root {
-  --link-header : #000;
-  --blue        : #0a78fa;
-  --bg          : #999FFF;
-  --border-color: #bdc1fc9f;
-  --container   : #fff;
-  --text-footer : #e7e7e7;
-  --hover-social: #1a1a1adf;
-  --dark-gray   : #636363;
-  --light-gray  : #aeaeae;
+  --colorTextPrimary  : #000;
+  --colorTextSecondary: #636363;
+  --bg_2              : #0e0e0e;
+  --bg_button         : #1a1a1a;
+  --bg                : #999FFF;
+  --button            : #999fff;
+  --border-color      : #bdc1fc9f;
+  --container         : #fff;
+  --text-footer       : #e7e7e7;
+  --hover-social      : #1a1a1adf;
+  --light-gray        : #aeaeae;
 }
 
 /* Para usar essa cores no projeto: 
@@ -63,7 +65,7 @@ button {
   }
 */
 
-/* BODY */
+/* =========BODY========= */
 .column {
   flex-basis: 49%;
 }
@@ -76,7 +78,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* HEADER (CABEÇALHO)*/
+/* =========HEADER (CABEÇALHO)========= */
 header {
   background-color: var(--bg);
   padding         : 20px 20px 0;
@@ -85,6 +87,12 @@ header {
 header .container {
   background-color: var(--container);
 
+}
+
+header .column figure {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
 }
 
 header .line {
@@ -96,14 +104,16 @@ header .column-left {
 }
 
 header .column-right {
-  flex-basis: 70%;
+  flex-basis: 60%;
+  text-align: center;
 }
 
 header .column img {
-  max-width       : 100%;
-  /* border-radius: 15%; */
-  filter          : drop-shadow(5px 1px 15px #bdc1fc);
-  transition      : 0.5s ease;
+  border-radius: 100%;
+  max-width    : 60%;
+  padding      : 10px;
+  filter       : drop-shadow(5px 1px 15px #bdc1fc);
+  transition   : 0.5s ease;
 }
 
 header .column img:hover {
@@ -111,14 +121,13 @@ header .column img:hover {
 }
 
 header .column h1 {
-  font-size : 2rem;
-  text-align: center;
+  font-size: 2rem;
+  color    : var(--colorTextPrimary);
 }
 
 header .column p {
-  text-align: center;
-  font-size : 1rem;
-  color     : var(--dark-gray);
+  font-size: 1rem;
+  color    : var(--colorTextSecondary);
 }
 
 header .column ul li {
@@ -127,33 +136,36 @@ header .column ul li {
 
 header .column ul li a {
   font-size: 0.92rem;
-  color    : var(--link-header);
+  color    : var(--colorTextPrimary);
 }
 
 /* INICAL PAGE (MAIN) */
+main .column {
+  padding: 20px;
+}
 
 main .column section {
-  border    : 1px solid var(--border-color);
-  margin    : 0 0 20px;
-  padding   : 20px;
-  min-height: 288px;
-
+  border-bottom: 1px solid var(--border-color);
+  margin       : 0 0 20px;
+  min-height   : 288px;
 }
 
 main .column section h2 {
   font-size: 1.3rem;
   margin   : 0 0 15px;
+  color    : var(--colorTextPrimary);
 }
 
 main .column section p {
   font-size  : 0.9rem;
-  color      : var(--dark-gray);
+  color      : var(--colorTextSecondary);
   line-height: 1.5;
   margin     : 0 0 15px;
 }
 
 main .column section ul li {
   line-height: 1.5;
+  color      : var(--colorTextPrimary);
 }
 
 main .column section ul li h3 {
@@ -167,10 +179,14 @@ main .column section ul li strong {
   display    : inline-block;
 }
 
-/* FOOTER (RODA-PÉ)*/
+/* =========FOOTER (RODA-PÉ)=========*/
 footer {
   background-color: var(--bg);
   min-height      : 74.7vh;
+}
+
+footer .container nav .social-network {
+  height: 55vh;
 }
 
 footer nav ul li a {
@@ -178,7 +194,8 @@ footer nav ul li a {
 }
 
 footer nav .info-contact {
-  margin: 0 0 15px;
+  margin : 0 0 15px;
+  padding: 0 0 0 15px;
 }
 
 footer nav .info-contact li a {
@@ -186,14 +203,16 @@ footer nav .info-contact li a {
 }
 
 footer nav .social-network {
-  text-align: center;
   border-top: solid 1px var(--border-color);
   margin    : 20px 0 50px;
   padding   : 50px 0 0;
+  text-align: center;
 }
 
 footer nav .social-network li {
-  margin: 0 0 10px 0;
+  margin    : 15px 28px;
+  text-align: center;
+  display   : inline-block;
 }
 
 footer nav .social-network li a {
@@ -209,10 +228,71 @@ footer nav .social-network li a i {
   margin   : 0 0 8px 0;
 }
 
-/* EXTRAS */
+/* ==============EXTRAS===============*/
+.activity-dark {
+  width  : 50px;
+  height : 50px;
+  display: none;
+}
+
+header .container {
+  position: relative;
+}
+
+label {
+  position        : absolute;
+  top             : 10px;
+  right           : 10px;
+  width           : 52px;
+  height          : 30px;
+  background-color: var(--bg_button);
+  border-radius   : 14px;
+  padding         : 5px 5px;
+  box-sizing      : border-box;
+  cursor          : pointer;
+}
+
+label span {
+  width           : 20px;
+  height          : 20px;
+  display         : block;
+  background-color: var(--button);
+  border-radius   : 100%;
+  transition      : 0.5s ease-out;
+}
+
+.activity-dark:checked~.dark-mode label span {
+  margin-left: 21px;
+}
 
 
-/* @MEDIA DESKTOP*/
+.activity-dark:checked~.dark-mode {
+  --bg                : #1a1a1a;
+  --hover-social      : #696969;
+  --colorTextPrimary  : #e6e6e6bd;
+  --colorTextSecondary: #696968;
+  --border-color      : #ffffff3a;
+  --button            : #999fff;
+  --bg_button         : #e6e6e6;
+}
+
+.activity-dark:checked~.dark-mode header {
+  background-color: var(--bg);
+}
+
+.activity-dark:checked~.dark-mode header .container {
+  background-color: var(--bg_2);
+}
+
+.activity-dark:checked~.dark-mode .container {
+  background-color: var(--bg_2);
+}
+
+.activity-dark:checked~.dark-mode main {
+  background-color: var(--bg);
+}
+
+/* ========= @MEDIA DESKTOP ========= */
 @media only screen and (min-width: 768px) {
 
   .container {
@@ -222,8 +302,12 @@ footer nav .social-network li a i {
     padding  : 30px;
   }
 
+  label {
+    right: 40px
+  }
+
   header {
-    padding: 30px 0 0
+    padding: 30px 0 0;
   }
 
   header .column img {
@@ -231,19 +315,16 @@ footer nav .social-network li a i {
     border-radius: 100%;
   }
 
-  header .column h1 {
+  header .column {
     text-align: start;
-    font-size : 2rem;
-  }
-
-  header .column p {
-    text-align: start;
-    font-size : 1rem;
-    color     : var(--dark-gray);
   }
 
   header .column ul li a {
     font-size: 1rem;
+  }
+
+  header .column ul {
+    text-align: start;
   }
 
   .line {
@@ -253,8 +334,21 @@ footer nav .social-network li a i {
     justify-content: space-between;
   }
 
+  main .column {
+    padding: 0;
+  }
+
+  main .column section {
+    border : 1px solid var(--border-color);
+    padding: 20px;
+  }
+
   footer {
     min-height: 20vh;
+  }
+
+  footer .container nav .social-network {
+    height: 10vh;
   }
 
   footer nav .social-network {
@@ -263,7 +357,15 @@ footer nav .social-network li a i {
   }
 
   footer nav .social-network li {
-    margin: 0 14px;
+    margin    : 0 14px;
+    text-align: center;
+    display   : initial;
   }
+}
 
+@media only screen and (min-width: 991px) {
+
+  header .column-right {
+    flex-basis: 70%;
+  }
 }
