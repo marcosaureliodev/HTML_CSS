@@ -195,7 +195,7 @@ footer nav ul li a {
 
 footer nav .info-contact {
   margin : 0 0 15px;
-  padding: 0 0 0 15px;
+  padding: 30px 0 15px 15px;
 }
 
 footer nav .info-contact li a {
@@ -204,7 +204,7 @@ footer nav .info-contact li a {
 
 footer nav .social-network {
   border-top: solid 1px var(--border-color);
-  margin    : 20px 0 50px;
+  margin    : 20px 0 0;
   padding   : 50px 0 0;
   text-align: center;
 }
@@ -290,6 +290,11 @@ label span {
 
 .activity-dark:checked~.dark-mode main {
   background-color: var(--bg);
+}
+
+.activity-dark:checked~.dark-mode footer nav .info-contact {
+  margin : 0 0 15px;
+  padding: 0 0 15px 15px;
 }
 
 /* ========= @MEDIA DESKTOP ========= */
