@@ -112,12 +112,12 @@ header .column img {
   border-radius: 100%;
   max-width    : 60%;
   padding      : 10px;
-  filter       : drop-shadow(5px 1px 15px #bdc1fc);
+  filter       : drop-shadow(0px 0px 10px #bdc1fc);
   transition   : 0.5s ease;
 }
 
 header .column img:hover {
-  filter: drop-shadow(5px 1px 40px #bdc1fc);
+  filter: drop-shadow(0px 0px 15px #bdc1fc);
 }
 
 header .column h1 {
@@ -216,7 +216,7 @@ footer nav .social-network li {
 }
 
 footer nav .social-network li a {
-  transition: 0.7s ease;
+  transition: 0.5s ease;
 }
 
 footer nav .social-network li a:hover {
@@ -225,7 +225,7 @@ footer nav .social-network li a:hover {
 
 footer nav .social-network li a i {
   font-size: 40px;
-  margin   : 0 0 8px 0;
+  margin   : 0  20px 15px;
 }
 
 /* ==============EXTRAS===============*/
@@ -297,6 +297,38 @@ label span {
   padding: 0 0 15px 15px;
 }
 
+/* ========= @keyframes aniamtion ========= */
+@keyframes aumentarLargura {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes aumentarAltura {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes imgRight{
+  0% {right:900px; top:0px;}
+  100% {right:0px; top:0px;}
+}
+
+@keyframes textLeft{
+  0% {left:900px; top:0px;}
+  100% {left:0px; top:0px;}
+}
+
+
 /* ========= @MEDIA DESKTOP ========= */
 @media only screen and (min-width: 768px) {
 
@@ -318,6 +350,13 @@ label span {
   header .column img {
     max-width    : 250px;
     border-radius: 100%;
+    
+    position: relative;
+    right: 9000px;
+    animation-name: imgRight;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
   }
 
   header .column {
@@ -344,16 +383,40 @@ label span {
   }
 
   main .column section {
-    border : 1px solid var(--border-color);
-    padding: 20px;
+    /* border  : 2px solid var(--border-color); */
+    border  : 2px solid transparent;
+    padding : 20px;
+    position: relative;
   }
 
-  footer {
-    min-height: 20vh;
+  main .column section span {
+    position: absolute;
+    display : block;
+    width   : 0;
+    height  : 0;
+    border  : 2px solid transparent;
   }
 
-  footer .container nav .social-network {
-    height: 10vh;
+  main .column section .topo-direita {
+    top                : -2px;
+    left               : -2px;
+    animation-name     : aumentarLargura, aumentarAltura;
+    animation-duration : 1s, 1s;
+    animation-delay    : 2s, 3s;
+    animation-fill-mode: forwards;
+    border-top-color   : var(--border-color);;
+    border-right-color : var(--border-color);;
+  }
+
+  main .column section .baixo-esquerda {
+    bottom             : -2px;
+    right              : -2px;
+    animation-name     : aumentarLargura, aumentarAltura;
+    animation-duration : 1s, 1s;
+    animation-delay    : 4s, 5s;
+    animation-fill-mode: forwards;
+    border-bottom-color: var(--border-color);;
+    border-left-color  : var(--border-color);;
   }
 
   footer nav .social-network {
@@ -372,5 +435,11 @@ label span {
 
   header .column-right {
     flex-basis: 70%;
+    position: relative;
+    right: 9000px;
+    animation-name: textLeft;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
   }
 }
