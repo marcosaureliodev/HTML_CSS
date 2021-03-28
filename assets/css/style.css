@@ -104,9 +104,17 @@ header .column-left {
 }
 
 header .column-right {
-  flex-basis: 60%;
-  text-align: center;
+  flex-basis         : 60%;
+  text-align         : center;
+  position           : relative;
+  right              : 9000px;
+  animation-name     : textLeft;
+  animation-duration : 1.5s;
+  animation-delay    : 2s;
+  animation-fill-mode: forwards;
 }
+
+
 
 header .column img {
   border-radius: 100%;
@@ -225,7 +233,7 @@ footer nav .social-network li a:hover {
 
 footer nav .social-network li a i {
   font-size: 40px;
-  margin   : 0  20px 15px;
+  margin   : 0 20px 15px;
 }
 
 /* ==============EXTRAS===============*/
@@ -318,14 +326,28 @@ label span {
   }
 }
 
-@keyframes imgRight{
-  0% {right:900px; top:0px;}
-  100% {right:0px; top:0px;}
+@keyframes imgRight {
+  0% {
+    right: 900px;
+    top  : 0px;
+  }
+
+  100% {
+    right: 0px;
+    top  : 0px;
+  }
 }
 
-@keyframes textLeft{
-  0% {left:900px; top:0px;}
-  100% {left:0px; top:0px;}
+@keyframes textLeft {
+  0% {
+    left: 900px;
+    top : 0px;
+  }
+
+  100% {
+    left: 0px;
+    top : 0px;
+  }
 }
 
 
@@ -348,14 +370,13 @@ label span {
   }
 
   header .column img {
-    max-width    : 250px;
-    border-radius: 100%;
-    
-    position: relative;
-    right: 9000px;
-    animation-name: imgRight;
-    animation-duration: 1.5s;
-    animation-delay: 0.5s;
+    max-width          : 250px;
+    border-radius      : 100%;
+    position           : relative;
+    right              : 9000px;
+    animation-name     : imgRight;
+    animation-duration : 1.5s;
+    animation-delay    : 0.5s;
     animation-fill-mode: forwards;
   }
 
@@ -404,8 +425,10 @@ label span {
     animation-duration : 1s, 1s;
     animation-delay    : 2s, 3s;
     animation-fill-mode: forwards;
-    border-top-color   : var(--border-color);;
-    border-right-color : var(--border-color);;
+    border-top-color   : var(--border-color);
+    ;
+    border-right-color: var(--border-color);
+    ;
   }
 
   main .column section .baixo-esquerda {
@@ -415,8 +438,10 @@ label span {
     animation-duration : 1s, 1s;
     animation-delay    : 4s, 5s;
     animation-fill-mode: forwards;
-    border-bottom-color: var(--border-color);;
-    border-left-color  : var(--border-color);;
+    border-bottom-color: var(--border-color);
+    ;
+    border-left-color: var(--border-color);
+    ;
   }
 
   footer nav .social-network {
@@ -434,12 +459,12 @@ label span {
 @media only screen and (min-width: 991px) {
 
   header .column-right {
-    flex-basis: 70%;
-    position: relative;
-    right: 9000px;
-    animation-name: textLeft;
-    animation-duration: 1.5s;
-    animation-delay: 2s;
+    flex-basis         : 70%;
+    position           : relative;
+    right              : 9000px;
+    animation-name     : textLeft;
+    animation-duration : 1.5s;
+    animation-delay    : 2s;
     animation-fill-mode: forwards;
   }
 }
