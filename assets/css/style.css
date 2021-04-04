@@ -200,7 +200,7 @@ footer {
 }
 
 footer .container nav .social-network {
-  height: 55vh;
+  height: 67vh;
 }
 
 footer nav ul li a {
@@ -462,6 +462,10 @@ label span {
     margin    : 0 14px;
     text-align: center;
     display   : initial;
+  }
+
+  footer .container nav .social-network {
+    height: 45vh;
   }
 }
 
